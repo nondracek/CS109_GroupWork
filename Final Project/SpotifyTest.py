@@ -37,6 +37,7 @@ for playlist in playlists:
     results = sp.user_playlist(playlist['owner']['id'], playlist['id'])
     playlistInfo = [results['name']]
     playlistInfo.append(results['followers']['total'])
+    
     playlistInfo.append(len(results['tracks']['items']))
     averageSongPopularity = 0
     howExplicit = 0
